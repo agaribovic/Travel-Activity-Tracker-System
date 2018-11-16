@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+	<!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+
+<!-- css za modal formu -->
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+
+
+
+</head>
+<body>
+     
+           
+          
+    <div id="wrapper">
+          <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #4CAF50">
+            <div class="adjust-nav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/palindrom.jpg" style="height: 50px; width: 50px; border-radius: 50%;"/>
+                        <span style="color:#aced84; text-align: center;"> Welcome to Travel Activity Tracker System </span>
+                    </a>
+                    
+                </div>
+              
+                <span class="logout-spn" >
+                   <a href="#" style="color:#aced84;">LOGOUT</a>    
+
+                </span>
+            </div>
+        </div>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                 
+
+
+                    <li class="active-link">
+                        <a href="adminPanel.html" ><i class="fa fa-desktop "></i> Admin Panel </a>
+                    </li>
+                   
+                    <li>
+                        <a href="userPanel.html"><i class="fa fa-qrcode "></i> User Panel </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i>Supervisor Panel </a>
+                    </li>
+                    
+                </ul>
+                            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-lg-12">
+                     <h2>ADMIN DASHBOARD</h2>   
+                    </div>
+                </div>              
+                 
+
+
+
+
+
+
+            
+                <div class="row">
+                    <div class="col-lg-12 ">
+                       <div class="alert alert-info" style="background-color: #4CAF50">
+                          <strong style="color: #aced84">Welcome Admin ! </strong> <span style="color: #aced84"> Select one of the options below. </span>
+                        </div>
+                       
+                    </div>
+                    </div>
+
+
+
+                 <!-- /. ROW  -->
+
+                 <!--ADMIN ZA KORISNIKE-->
+
+
+
+                    <div class="row text-center pad-top">
+
+
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="adminCard.html">
+ <i class="fa fa-key fa-5x"></i>
+                      <h4>Admin Profile</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+                 
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="allUsersListed.html" >
+ <i class="fa fa-users fa-5x"></i>
+                      <h4>See Users</h4>
+                      </a>
+                      </div>
+
+
+
+                  </div>
+
+          
+                     
+              
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square" onclick="document.getElementById('id02').style.display='block'" style="width: auto">
+
+ <i class="fa fa-user fa-5x"></i>
+                      <h4>Add User</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div> 
+
+
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="allHotelsListed.html" >
+   <i class="fas fa-hotel fa-5x"></i>
+                      <h4> See Hotels </h4>
+                      </a>
+                      </div>
+
+                  </div>
+
+
+
+                    <!-- dodavanje hotela -->
+
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square" onclick="document.getElementById('id01').style.display='block'" style="width: auto">
+
+<i class="fas fa-building fa-5x"></i>
+
+
+
+
+                      <h4>Add Hotel</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="blank.html" >
+<i class="far fa-calendar fa-5x"></i>
+
+
+                      <h4>Manage Reservations</h4>
+                      </a>
+                      </div>
+                     
+                     
+
+                  </div>
+
+   
+              </div>
+
+
+
+          
+
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+    <div class="footer" style="background-color: #4CAF50;">
+      
+    
+            <div class="row">
+                <div class="col-lg-12" style="text-align: center">
+                    <span style="color:#aced84">&copy; 2018  Team 1 - Palindrom | Travel Activity Tracker System </span>
+                </div>
+            </div>
+        </div>
+          
+
+<!-- FORMA ZA DODAVANJE NOVIH HOTELA -->
+
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/hotel.png" alt="Avatar" class="avatar" style="height: 350px; width: 350px">
+    </div>
+
+    <div class="container">
+      <label for="name"><b>Name</b></label>
+      <input type="text" placeholder="Enter hotel name" name="name" required>
+
+      <label for="desc"><b>Description</b></label>
+      <input type="text" placeholder="Enter hotel description" name="desc" required>
+
+      <label for="lat"><b>Latitude</b></label>
+      <input type="text" placeholder="Enter latitude" name="lat" required>
+
+      <label for="long"><b>Longitude</b></label>
+      <input type="text" placeholder="Enter longitude" name="long" required>
+
+      <label for="city"><b>City</b></label>
+      <input type="text" placeholder="Enter city" name="city" required>
+        
+      <button type="submit">Save Changes</button>
+      <label>
+       
+
+    </div>
+
+  </form>
+</div>
+
+<!-- FORMA ZA DODAVANJE NOVIH KORISNIKA -->
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/guest.png" alt="Avatar" class="avatar" style="height: 350px; width: 350px">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+     <label for="psw"><b>Password</b></label>
+      <input type="text" placeholder="Enter Password" name="psw" required>
+
+      <label for="fname"><b>First Name</b></label>
+      <input type="text" placeholder="Enter First Name" name="fname" required>
+
+
+      <label for="lname"><b>Last Name</b></label>
+      <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+      <label for="role"><b>Role</b></label>
+      <input type="text" placeholder="Enter Role" name="role" required>
+
+      <label for="long"><b>Longitude</b></label>
+      <input type="text" placeholder="Enter Longitude" name="long" required>
+
+      <label for="lat"><b>Latitude</b></label>
+      <input type="text" placeholder="Enter Latitude" name="lat" required>
+
+      <label for="email"><b>E-mail</b></label>
+      <input type="text" placeholder="Enter E-mail" name="email" required="">
+   
+      <button type="submit">Add</button>
+      
+    </div>
+
+  
+  </form>
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+function message() {
+    alert("New hotel successfully added!");
+}
+
+
+</script>
+
+
+
+
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+    
+   
+</body>
+</html>
