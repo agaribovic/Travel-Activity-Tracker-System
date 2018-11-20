@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Contact Us </title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 700px;
+    margin: auto;
+}
+
+
+</style>
+<body style="background-color: #4CAF50">
+
+<h3 style="text-align: center;">Contact Us</h3>
+
+<div>
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+        <option value="albania"> Albania </option>
+        <option value="andorra"> Andorra </option>
+        <option value="armenia"> Armenia </option>
+        <option value="austria"> Austria </option>
+        <option value="azerbaijan"> Azerbaijan </option>
+        <option value="belarus"> Belarus </option>
+        <option value="belgium"> Belgium </option>
+        <option value="bosnia and herzegovina"> Bosnia and Herzegovina </option>
+        <option value="bulgaria"> Bulgaria </option>
+        <option value="croatia"> Croatia </option>
+        <option value="cyprus"> Cyprus </option>
+        <option value="czech republic"> Czech Republic </option>
+        <option value="denmark"> Denmark </option>
+        <option value="estonia"> Estonia </option>
+        <option value="finland"> Finland </option>
+        <option value="france"> France </option>
+        <option value="georgia"> Georgia </option>
+        <option value="germany"> Germany </option>
+        <option value="greece"> Greece </option>
+        <option value="hungary"> Hungary </option>
+        <option value="iceland"> Iceland </option>
+        <option value="ireland"> Ireland </option>
+        <option value="italy"> Italy </option>
+        <option value="kazakhstan"> Kazakhstan </option>
+        <option value="kosovo"> >Kosovo </option>
+        <option value="latvia"> Latvia </option>
+        <option value="liechtenstein"> Liechtenstein </option>
+        <option value="lithuania"> Lithuania </option>
+        <option value="luxembourg"> Luxembourg </option>
+        <option value="macedonia"> Macedonia (FYROM) </option>
+        <option value="malta"> Malta </option>
+        <option value="moldova"> Moldova </option>
+        <option value="monaco"> Monaco </option> 
+        <option value="montenegro"> Montenegro </option>
+        <option value="netherlands"> Netherlands </option>
+        <option value="norway"> Norway </option>
+        <option value="poland"> Poland </option>
+        <option value="portugal"> Portugal </option>
+        <option value="romania"> Romania </option>
+        <option value="russia"> Russia </option>
+        <option value="san marino"> San Marino </option> 
+        <option value="serbia"> Serbia </option>
+        <option value="slovakia"> Slovakia </option> 
+        <option value="slovenia"> Slovenia </option>
+        <option value="spain"> Spain </option> 
+        <option value="sweden">Sweden </option> 
+        <option value="switzerland"> Switzerland </option>
+        <option value="turkey"> Turkey </option>
+        <option value="ukraine"> Ukraine </option>
+        <option value="united kingdom">United Kingdom (UK) </option> 
+        <option value="vatican city">Vatican City (Holy See) </option>
+</select>
+  
+<label for="message">Message</label>
+<textarea rows="10" cols="50" name="message" form="action_page.php" placeholder="Your message..."> </textarea>
+
+    <input type="submit" value="Send"> 
+  </form>
+</div>
+
+
+
+</body>
+</html>
